@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <script>
+
+    const a = []
+    const b = [1,true,"Hola",["A","B","C",[1,2,3]]]
+
+    console.log(a);//Nos muestra 0 ya que el Array esta vacio
+    console.log(b);//Nos muestra el contenido del Array b
+    console.log(b[2]);//Nos muestra el segundo elemento del array b, recordar que los length empiezan desde 0
+    console.log(b[0]);//Nos muestra el contenido del array 0 en este caso el numero 1
+    console.log(b[3]);//Nos muestra el contenido del array 3 que en este caso seria el subarray en esta posicion
+    console.log(b[3][2]);//Nos muestra el contenido del array 3 y la C en la C que se encontraria en la segunda posicion de este array
+    console.log(b[3][3][0]);//Nos muestra el contenido del array 3 que a su ves seria un subarray que a su ves contredia el numero uno en su pocision que seria la 0
+
+    const c = Array.of("X","Y","Z",9,8,7)
+    console.log(c)
+
+    const d = Array(100).fill(false);//Para hacer arreglos de varias posiciones 
+    console.log(d)
+
+    const colores = ["Azul","Blanco","Verde"];
+    console.log(colores)
+
+    colores.push("Negro");
+    console.log(colores)// push Añade elementos al array
+
+    colores.pop()
+    console.log(colores)//Elimina el ultimo elemento del array
+
+    colores.forEach(function(e){
+        console.log(`li`)
+    });
+
+
+
+
+    </script>
+</body>
+</html>

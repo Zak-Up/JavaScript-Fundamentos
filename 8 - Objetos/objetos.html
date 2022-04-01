@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <script>
+    /*
+    JavaScript está diseñado en un paradigma simple basado en objetos. Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor. El valor de una propiedad puede ser una función, en cuyo caso la propiedad es conocida como un método. Además de los objetos que están predefinidos en el navegador, puedes definir tus propios objetos. Este capítulo describe cómo usar objetos, propiedades, funciones y métodos; y cómo crear tus propios objectos.
+    */
+
+const jon = {
+    nombre: "Andres",
+    apellido: "Restrepo",
+    edad : 35,
+    pasatiempos :["Correr","Hacer musica","Hacer ejercicio",], 
+    soltero: false,
+    contacto:{
+        email: "andresjr19@hotmail.com",
+        twitter: "@zakyUp",
+        movil: "573136548595", 
+    },
+
+    saludar: function(){
+    console.log(`Hola`)
+    },
+    decirMiNombre: function(){
+        console.log(`Hola me llamo ${this.nombre} tengo ${this.edad} años, estos son mis contactos ${this.contacto.movil} y seguirme en twitter como ${this.contacto.twitter}`);
+    }
+}
+
+console.log(jon)
+console.log(jon["nombre"]);
+console.log(jon["apellido"]);
+console.log(jon["edad"]);
+console.log(jon["pasatiempos"]);
+console.log(jon["soltero"]);
+console.log(jon["contacto"]);
+console.log(jon.contacto.twitter);
+console.log(jon.pasatiempos[2]);
+console.log(jon.contacto.movil);
+
+jon.saludar();
+jon.decirMiNombre();
+
+console.log(Object.keys(jon));
+console.log(Object.values(jon));
+console.log(jon.hasOwnProperty("nombre"));
+
+
+
+
+    </script>
+</body>
+</html>

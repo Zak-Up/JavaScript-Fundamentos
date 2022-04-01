@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow Functions o funciones flecha</h1>
+    <script>
+
+        
+    // const saludar = function (){
+    //     console.log("Hola");
+    // }
+    
+    // saludar();
+
+    //Veremos como usar el arrow function para simplificar el codigo en el ejemplo anterior cambiando function por => es una nueva forma de expresar
+
+    // const saludar = () => {
+    //     console.log("Hola")
+    // }
+
+    // saludar();
+
+    //Otro ejemplo
+
+    const saludar = (nombre) => console.log(`Hola ${nombre}`);
+    saludar("irma");
+
+    // const sumar = function (a,b){
+    //     return a + b;
+    // }
+    // console.log(sumar(9,9));  // Forma clasica
+
+    const sumar = (a,b) => a+b;
+    console.log(sumar(9,9));//Forma actual mucho mas simpplificada y expresiva la linea de codigo.
+
+    const funcionDeVariasLineas = () => {
+        console.log("Uno");
+        console.log("dos");
+        console.log("tres");
+    
+    }
+
+    funcionDeVariasLineas();
+
+
+
+    </script>
+</body>
+</html>

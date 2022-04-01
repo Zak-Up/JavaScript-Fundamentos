@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DESTRUCTURACION</h1>
+<!-- Es una forma de asignar valores a arreglos u objetos -->
+    <script>
+
+    const numeros = [1,2,3,4];
+
+    //Sin destructuracion
+    let uno = numeros [0];
+        dos = numeros [1];
+        tres = numeros [2];
+        cuatro = numeros [3];
+
+    console.log(uno,dos,tres,cuatro); //Se destructuran los cuatro numeros del array  
+
+
+    //Con destructuracion
+    let persona = {
+        nombre: "Andres",
+        apellido: "Restrepo",
+        edad: 30
+    }
+
+    let{nombre,apellido,edad} = persona;
+    console.log(nombre,apellido,edad);//Se destructuran los valores como se ven en el ejemplo se aislan a traves de la variable
+
+
+
+
+
+    </script>
+</body>
+</html>

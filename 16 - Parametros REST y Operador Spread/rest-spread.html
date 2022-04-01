@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Parametros REST & Operador Spread</h1>
+    <script>
+
+   //          Parametro REST
+   
+    function sumar(a,b,...c) { //Los tres puntos suspensivos ... son un parametro REST agrega un arreglo que permite añadirle mas valores y sumarlos en este caso en el parametro c
+        let resultado = a + b;
+
+        c.forEach(function (n){
+            resultado += n
+        });
+        return resultado;
+    }
+
+    console.log(sumar(1,2));
+    console.log(sumar(1,2,3,4,5,6,7,8,9));
+    console.log(sumar(1,2,3,4,5));
+    
+
+//            Spread Operator
+
+const arr1 = [1,2,3,4,5];
+arr2 = [6,7,8,9,0];
+
+console.log(arr1,arr2);
+
+const arr3 = [...arr1,...arr2];//Operador de propagacion "..."
+console.log(arr3);//En el Spread Operator los ... suspensivos me permite fusionar en uno solo dos arreglos, con dos arrays diferentes, en uno solo con el mismo numero de logintud.
+
+    </script>
+</body>
+</html>

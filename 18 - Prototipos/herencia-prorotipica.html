@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Herencia Prototipica </h1>
+</body>
+<script>
+
+
+function Animal(nombre,genero){
+
+
+    this.nombre = nombre;
+    this.genero = genero;
+
+} 
+
+
+Animal.prototype.sonar = function(){
+    console.log("Hago sonidos porque esoty vivo");
+}
+
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`);
+} 
+
+//Herencia prototipica
+
+function Perro(nombre,genero,tamanio){
+    this.super = Animal;//Super manda a llamar a la clase del elemento padre es decir Animal
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
+}
+
+Perro.prototype = new Animal();//En esta linea creamos la herencia de animal, perro hereda de Animal
+Perro.prototype.constructor = Perro;
+
+//Perro heredando de Animal
+Perro.prototype.sonar = function(){
+    console.log("Soy un perro y ladro")
+}
+
+Perro.prototype.ladrar = function(){
+    console.log("Guauuu Guauuuu!")
+}
+
+
+const snoopy = new Perro("Snoopy","Macho","Mediano");
+lolaBunny = new Animal("Lola Bunny","Hembra");
+
+console.log(snoopy);
+console.log(lolaBunny);
+
+snoopy.sonar();
+snoopy.saludar();
+snoopy.ladrar();
+
+lolaBunny.sonar();
+lolaBunny.saludar();
+
+
+
+
+
+
+
+</script>
+</html>

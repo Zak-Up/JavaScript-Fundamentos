@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <H1>JSON JavaScript Object Notation</H1>
+    <script>
+        // JSON: Un formato ligero de intercambio de datos (Traductor) 
+
+        const json = {
+            cadena: "Andres",
+            numero: 30,
+            booleano: true,
+            arreglo: ["correr","Programar","Cocinar"],
+            objeto: {
+                twitter: "@andresalreves",
+                email: "andresjr195@hotmail.com"
+            },
+            nulo: null
+        }
+
+        console.log(json);
+
+//                       JSON.parse
+
+        console.log(JSON);
+        console.log(JSON.parse("{}"));//Convierte corchetes en objeto
+        console.log(JSON.parse("[1,2,3]"));//Covierte datos de array en objeto
+        console.log(JSON.parse("true"));//Convierte string en Boolean
+        console.log(JSON.parse("false"));
+        console.log(JSON.parse("19"));//Convierte numero string en objeto numero
+
+//                      JSON.stringify  
+
+        console.log(JSON);
+        console.log(JSON.stringify({}));//Convierte corchetes en cadena de texto
+        console.log(JSON.stringify([1,2,3]));//Covierte datos de array en cadena de texto
+        console.log(JSON.stringify(true));//Convierte boolean en cadena de texto
+        console.log(JSON.stringify(false));
+        console.log(JSON.stringify(19));//Convierte numero string 
+        console.log(JSON.stringify({x:2,y:3}));//Convierte expresion compleja a string   
+
+        console.log(JSON.stringify(json)); 
+        console.log(JSON.parse('{"cadena":"Andres","numero":30,"booleano":true,"arreglo":["correr","Programar","Cocinar"],"objeto":{"twitter":"@andresalreves","email":"andresjr195@hotmail.com"},"nulo":null}'))
+    </script>
+</body>
+</html>

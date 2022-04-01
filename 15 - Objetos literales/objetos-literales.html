@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos literales</h1>
+</body>
+<script>
+    let nombre = "Mateo",
+    edad = 7;
+
+    const perro = {
+        nombre:nombre,
+        edad:edad,
+        ladrar: function (){
+            console.log("guauu guauu!")
+        }
+    }
+
+console.log(perro)
+perro.ladrar()
+
+    const dog = {
+        nombre,
+        edad,
+        raza:"Callejero",
+        ladrar(){//Atencion aqui escribimos la funcion de manera diferente a el primer ejemplo por actualizaciones ECMA Java Script
+            console.log("guauu guauu guau!")
+        }
+    }
+    console.log(dog);
+    dog.ladrar();
+
+
+</script>
+</html>

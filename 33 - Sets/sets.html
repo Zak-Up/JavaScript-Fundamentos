@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sets</h1>
+    <script>
+        const set = new Set ([1,2,3,4,5,true,true,false,false,{},{},"hola","HOLA"]);
+        console.log(set);//Los valores repetidos no aparecen en la consola porque identifica un nombre unico por valor.
+
+        const set2 = new Set();
+        set2.add(1);
+        set2.add(2);
+        set2.add(2);
+        set2.add(3);
+        set2.add(true);
+        set2.add(false);
+        set2.add(true);
+        set2.add({});
+
+        console.log(set2);//Aqui pasa lo msimlo que en el primer ejemplo
+        console.log(set2.size);
+
+        console.log("Recorriendo set");
+
+        for (item of set){
+            console.log(item);
+        };
+       
+        console.log("Recorriendo set2");
+        set2.forEach(item => console.log((item)));
+
+        let arr = Array.from(set);
+        console.log(arr);//Para convertir un set en un Array
+
+        set.delete("HOLA");//Propiedad especia que permite borrar elementos de set
+        console.log(set);
+
+        console.log(set.has("hola"));//Propiedad que permite validar si un elemento se encuentra dento de set.
+
+        set2.clear();//Propiedad para limpiar el set
+        
+
+       
+
+
+
+
+    </script>
+</body>
+</html>

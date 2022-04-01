@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Break y continue</h1>
+
+
+    <script>
+     
+     
+const numeros = [1,2,3,4,5,6,7,8,9,0];
+
+for (let i = 0; i < numeros.length; i++) {
+    if(i===5){
+        break;//El break se sale de el ciclo, rompe la estrucura  que le estamos pidiendo es decir normalmente sumaria el valor hasta 10 digitos pero con el break lo corta en 5
+    }
+console.log(numeros[i]);
+}
+
+for(let i = 0; i < numeros.length;i++){
+    if (i===5){
+        continue;//El continue omite el numero en la posicion 5 en este  caso eñ numero 6 del array
+    }
+
+console.log(numeros[i]);    
+}
+
+
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>

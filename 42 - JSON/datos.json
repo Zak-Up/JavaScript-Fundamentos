@@ -1,0 +1,11 @@
+{
+    "cadena": "Andres",
+    "numero": 30,
+    "booleano": true,
+    "arreglo": ["correr","Programar","Cocinar"],
+    "objeto": {
+        "twitter": "@andresalreves",
+        "email": "andresjr195@hotmail.com"
+    },
+    "nulo": null
+}

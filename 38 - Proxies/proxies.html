@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxies</title>
+</head>
+<body>
+    <h1>Proxies</h1>
+    <script>
+        // PROXIES permite crear un objeto basado en un objeto inicial
+
+        const persona = {
+            nombre: "",
+            apellido: "",
+            edad: 0
+        }
+
+        const manejador = {
+            set(obj,prop,valor){
+                obj[prop] = valor;
+            }
+        }
+
+        const Andres = new Proxy(persona,manejador);
+        Andres.nombre = "Andres";
+        Andres.apellido = "Restrepo";
+        Andres.edad = 30;
+
+        console.log(Andres);
+
+    </script>
+</body>
+</html>

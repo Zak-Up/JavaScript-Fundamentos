@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HENRY CHALENGE</h1>
+    <script>
+        function sumaTodosImpares (array) {
+            //La funcion llamada sumaTodosImpares recibe como argumento un array de enteros, y debe devolver la suma total entre todos los imapres.
+            // Ej:
+            //sumaTodosImpares ([1,5,2,9,6,4]) devuleve 1 + 5 + 9= 15
+            
+
+
+            return array.reduce((a, c) => (c % 2 ==! 0 
+            ? a + c 
+            : a), 0)
+        }
+        console.log(sumaTodosImpares([1,5,2,9,6,4]))
+
+        function stringMasLarga(str){
+            //La funcion lla,ada 'string mas larga' recibe como argumento una frase (string) 'str'
+            //y debe devolver la palabra (string) mas larga que haya en esa frase (Es decir el de mayor cantidad de caracteres)
+            //Ej:
+            //stringMasLarga('Ayer fui a pasear a una plaza') debe retornar 'pasear'
+            //stringMasLarga('Me gusta mucho JavaScript') debe retornar 'javascript'
+            //Tip: podes usar el metodo de String 'split'
+            //Tu codigo aca:
+            return str.split('').reduce((a, c) => (c.length > a.length ? c : a),'')
+        }
+        console.log(stringMasLarga(('Me gusta mucho Javascript')))
+
+        function estaOffline(usuarios, nombre){
+            //La funcion llamada 'esta offline' recibe como argument un array de objetos llamado usuarios y un string llamado nombre
+            // Cada objeto tiene un property 'nombre'.
+            //cada objeto tiene una property 'nombre' que es una string y otra llamada oneline que es un booleano.
+            //La funcion debe retornar true si el usuario se encuentra offline, de lo contrario false.
+            //Ej: 
+            var usuarios = [
+                {
+                    nombre: 'toni',
+                    online: true
+                },
+                {
+                    nombre: 'emi',
+                    online: true
+                },
+                {
+                    nombre: 'Agus',
+                    online: false
+                }
+            ];
+            //estaOffline(usuarios, 'Agus') retorna true
+            //estaOffLine(usuarios, 'emi') retorna false
+            //Tu codigo aca:
+
+
+            usuarios.map((usuario) => (users[usuario.nombre] = usuario.online))
+            return !users[nombre]
+        
+        }
+
+        function actividadesEnComun(persona1, persona2) {
+            //La funcion llamada actividadesEnComun recibe como argumento dos array de actividades (strings) llamadas persona1 y persona2
+            //Y debe devolver un array de strings con las actividades en comun (aquellas que se repiten) entre cada array.
+            //ej: persona1 = ['leer', 'comer', 'pasear', 'jugar']
+            //    persona2 = ['comer', 'dormir', 'futbol']
+            //actividadesEnComun(persona1, persona2) => ['comer', 'dormir']
+            //Tip: poder usar ciclos anidados.
+            //El codigo aca:
+
+            let res = []
+            for (let actividad of persona1) {
+                if (persona2.includes(actividad)) res.push(actividad)
+            }return res
+        }
+
+        function buscaDestruye(arreglo, num){
+            //La funcion busca destruye recibe como argumento un array de enteros 'arreglo' y un entero 'num'
+            //Esta funcion tiene que eliminar los numeros del array que coincidan con el numero recibido como argumento.
+            //La funcion debe retornar los array sin los numeros sacados.
+            //Ej: buscaDestruye([1,2,3,4], 2) devuelve => [2,3,4]
+
+            //Tu codigo aca
+            return arreglo.filter((e) => e !== num)
+    
+        }
+
+        function sumarElTipo(arreglo){
+            //La funcion llamada 'sumarElTipo' recibe un array de tipo strings como argumento
+            //que contiene tipos de vehiculos y debe devolver un objeto con la cantidad de veces que se repita cada tipo
+            //El objeto     que devuleve tiene como propiedades el nombre de cada vehiculo y su valor es la cantidad de veces que se repita.
+            // Ej:
+            //sumarElTipo(['auto','moto', 'auto'])
+            //Tu codigo aca:
+            let obj = {}
+            arreglo.map((vehiculo) => 
+                obj[vehiculo] ? obj[vehiculo]++ : (obj[vehiculo] = 1 ))
+                return obj
+        }
+
+        function crearClaseEmprendedor(){
+            class Emprendedor {
+                constructor(nombre, apellido, libros, mascotas) {
+                    //El constructor de la clase emprendedor recibe el nombre (string), apellido (string), libros (array de objetos), mascotas (array de strings)
+                    //Inicializar las pripiedades del emprendedor con los valores recibidos como argumento
+                    //El codigo aca:
+                    this.nombre = nombre
+                    this.apellido = apellido
+                    this.libros = libros
+                    this.mascotas = mascotas
+                }
+
+                addMascota(mascota) {
+                    //este metodo debe agregar una mascota (mascota) el arreglo de mascotas del emprendedor.
+                    //no debe retornar nada.
+                    //Tu codigo aca:
+                    this.mascotas.push(mascota)
+                }
+
+                get mascotas() {
+                    //El metodo get mascotas debe retornar la cantidad de mascotas que tiene el emprendedor.
+                    //Ej:
+                    //Suponiendo que el emprendedor tiene estas mascotas ['perro','gato']
+                    //Tu codigo aca:
+                    return this.mascotas.length
+                }
+
+                addBook(book, autor) {
+                    //El metodo addBoom recibe un string 'autor'y debe agregar un objeto:
+                    //{nombre: book,autor: autor} al arreglo de libros del emprendedor.
+                    //No debes retornar nada.
+                    //Tu codigo aca:
+                    this.libros.push({nombre: book, autor})
+            }
+
+                getBooks(){
+                    //El metodo 'getBooks' debe retornar un arreglo solo con los nombres del arreglo de libros del emprendedor
+                    //Ej:
+                    //Suponiendo que el emprendedor tiene estos libros: [{nombre: 'El señor de las moscas', autor: 'William Golding'} {nombre: 'Fundacion', autor: 'Isaac Asimov'}]
+                    //emprendedor.getBooks() deberia devolver ['El señor de las moscas', 'Fundacion']
+                    let arr = []
+                    this.libros.map((obj) => arr.push(obj['nombre']))
+                    return arr 
+                }
+
+                getFullName(){
+                    //El metodo getFullName debe retornar un string con el nombre y apellido del emprendedor.
+                    //Ej:
+                    //Suponiendo que el emprendedor tenga como nombre 'Elon' y apellido 'Musk'
+                    //Tu codigo aca:
+                    return `${this.nombre} ${this.apellido}`
+                }
+        }
+            return Emprendedor
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

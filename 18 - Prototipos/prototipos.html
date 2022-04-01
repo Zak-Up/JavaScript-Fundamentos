@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROTOTIPOS</h1>
+    <script>
+
+    /*                PROGRAMACION ORIENTADA A OBJETOS OOP
+
+    OOP (Programación orientada a objetos) es un paradigma de programación en el que los datos son encapsulados en objetos, los cuales tienen su propio comportamiento.
+
+    JavaScript esta altamente orientado a objetos. Sigue el modelo basado en prototipado (en oposición al modelo basado en clases).
+
+    Clases - Modelo a seguir 
+    Objetos - Es una instancia de una clase
+    --Atributos- caracteristica o propiedad el objeto
+    --Metodos - acciones que un objeto puede realizar (funciones dentro de un objeto)
+
+
+    PROTOTIPOS: Es un mecanismo por el cual un objeto puede heredar atributos y metodos. 
+    
+    */ 
+
+const animal = {
+    nombre:"Snoopy",//El nombre es un atributo
+    sonar(){        //Sonar es un metodo o funcion
+        console.log("Hago sonidos porque esoty vivo");
+    }
+}
+console.log(animal);//Objeto literal prototipo object
+
+const animal2 = {
+    nombre:"Lola Bunny",//El nombre es un atributo
+    sonar(){        //Sonar es un metodo o funcion
+        console.log("Hago sonidos porque esoty vivo");
+    }
+}
+console.log(animal2);//Onjeto literal prototipo Object
+
+
+
+//Funcion constructora - Usando el UpperCamelCase (Primera letra mayuscula)
+
+// function Animal(nombre,genero){
+
+// //Atributos
+
+//     this.nombre = nombre;//this hace referencia a al misma funcion
+//     this.genero = genero;
+
+
+// //Metodos
+
+// this.sonar = function(){//En la funcion constructora tanto el atributo como el metodo tienen que colgar de el this
+//     console.log("Hago sonidos porque esoty vivo");
+// }
+
+// this.saludar = function(){
+//     console.log(`Hola me llamo ${this.nombre}`);
+// } 
+// }  
+
+//Funcion constructora donde asignamos los metodos al prototipo y no a la funcion
+
+function Animal(nombre,genero){
+
+//Atributos
+
+    this.nombre = nombre;//this hace referencia a al misma funcion
+    this.genero = genero;
+
+} 
+
+//Metodos agregados al prototipo de la funcion constructora con (Animal.prototype)
+
+Animal.prototype.sonar = function(){//En la funcion constructora tanto el atributo como el metodo tienen que colgar de el this
+    console.log("Hago sonidos porque esoty vivo");
+}
+
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`);
+} 
+
+
+
+const snoopy = new Animal("Snoopy","Macho");
+lolaBunny = new Animal("Lola Bunny","Hembra");
+
+console.log(snoopy);
+console.log(lolaBunny);
+
+snoopy.sonar();
+snoopy.saludar();
+
+lolaBunny.sonar();
+lolaBunny.saludar();
+
+
+
+
+
+
+    </script>
+</body>
+</html>

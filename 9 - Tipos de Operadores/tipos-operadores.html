@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tipos de Operadores</h1>
+
+                     <!-- OPERADORES -->
+<Script>
+
+          //Aritmeticos + - * / % 0
+
+let a = 5 + (5-10)*3;
+let modulo = (5%2); //Este operador lo que jace es devolvernos el residuo de una division
+
+console.log(a)
+console.log(modulo);
+
+         //Relacionales <,>,->,=,<=,==,===,!=,!==
+
+console.log(8>9);
+console.log(9>8);
+console.log(8>=9);
+console.log(7<7);
+console.log(7<=7);
+
+// = 1 igual es asignaciom de variable
+// == 2 iguales es comparacion de valores
+// === 3 iguales es comparacion de tipo de dato y de valor
+
+console.log(7 == 7); //Aqui compara dos valores iguales por lo tanto dara true
+console.log("7"==7);//Aqui compara dos tipos de datos pero con el mismo valor dara true
+console.log(0==false);//Aqui compara ambos valores que tienden a false
+
+
+console.log(7===7);//Aqui comparara dos datos y tipos de datos igual dara true
+console.log("7"===7);//Aqui comparara dos tipos de datos diferentes por lo danto dara false
+console.log(0===false);//Aqui compara dos tipos de datos que tienden a false y daran false
+
+          //Incremento y decremento
+
+let i = 1;
+
+i = i + 2;  //Suma el valor de i que en este caso seria 1
+console.log(i);
+
+i += 3;
+console.log(i);//Suma el valor anterior de i que seria 3 y daria 6
+
+i /= 2;
+console.log(i);  //Aqui dividimos 6 resultado de operacion anterior en 2 y pues da 2
+
+
+             // Operadores Logicos
+
+// ! Not = El simbolo admiracion aqui cumpla la funcion de negacion si una condicion es verdadera la convierte en falsa y visceversa
+
+console.log(!true)
+
+// || Or = El simbolo barra vertical dos veces valida si tengo 2 o mas condiciones, si una se cumple es verdadera O si no se validara
+
+console.log((9===9) || ("9"===9));//Con que una de las afirmciones se cumpla dara True
+
+// && And = Cuando tengo dos o mas condiciones todas tienen que cumplirse o arrojara false
+
+console.log((9===9) && ("9"===9));  //Se tiene que cumplir ambas afirmaciones, en este caso una no se cumple ya que utiliza dos tipos de datos distintos y por este motivo arrojara un false
+
+
+
+
+
+
+
+
+
+
+
+
+</Script>
+</body>
+</html>

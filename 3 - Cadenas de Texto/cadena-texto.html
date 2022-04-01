@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Cadena de Texto</h1>
+
+    <script>
+
+    //Cadenas de texto y sus constructores
+
+    let nombre = "Andres";
+    let apellido = "Restrepo"
+    let saludo = new String("Hola Mundo")
+    let lorem = "        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi nam, similique nisi asperiores illo repellendus facere voluptatum, sequi quibusdam unde pariatur enim illum. Cum id sunt sequi vero veniam.      "
+
+    console.log(nombre,apellido,saludo)//Se imprime nuestro nombre y el new String que agregamos
+    console.log(nombre.length,
+                apellido.length,
+                saludo.length)//Se imprime el numero de caracateres con length
+
+    console.log(nombre.toUpperCase(),
+                apellido.toLowerCase(),
+                saludo,)//Se imprime con mayusculas con toUppercase y minusculas con toLowercase
+
+    console.log(
+        lorem.includes("consectetur")//Aqui buscamos la palabra"consectetur" a traves de includes y nos arroja true porque si aparece dentro de lorem
+    ) 
+
+    console.log(lorem.trim()) //Aqui trim nos elimina espacios al principio y al final del texto, ideal para formularios en casilla contraseña
+
+    console.log(lorem.split(","))//En este ejemplo con lorem.split añadimos una coma en cada espacio y creamos un arreglo, se puede poner cualquier caracter
+    </script>
+</body>
+</html>
+

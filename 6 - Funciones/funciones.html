@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funciones</h1>
+
+    <!-- Las funciones son un bloque de codigo autocontenido independiente del ambito global, se define una sola vez y se puede ejecutar en cualquier momento.
+    Opsionalmente, una funcion puede aceptar parametros y devolver un valor.
+
+    Las funsiones en Java Script son un tipo especial de objetos;
+
+    Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor y pueden pasarse como argumentos y usarse como valor de retorno.
+    -->
+    <script>
+    
+    // Funcion Declarada
+    function estoEsUnaFuncion(){
+        console.log("uno")
+        console.log("dos")
+        console.log("tres")
+    }
+
+    //Invocacion de funcion
+    // estoEsUnaFuncion();
+    // estoEsUnaFuncion()
+
+    function unaFuncionQueDevuelveValor(){
+        console.log("uno")
+        return 19;//Todo lo que esta antes de el primer return se ejecuta y lo que esta despues se ignora
+        console.log("dos")
+        console.log("tres")
+        return "La funcion ha retornado una Cadena de texto"
+}
+
+// let valorDeFuncion = unaFuncionQueDevuelveValor()
+// console.log(valorDeFuncion)
+
+//Valores asignados
+// function saludar(nombre, edad){
+//     console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`)
+// }
+
+// saludar("Kenai",7)//Ejemplo de Funcion con valores asignados
+
+//Funciones declarada VS Funciones expresadas
+funcionDeclarada()
+
+function funcionDeclarada(){
+    console.log("Esto es una funcon de clarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada")
+}
+funcionDeclarada()
+
+//Funcion anonima
+// funcionExpresada()
+
+const funcionExpresada = function(){
+    console.log("Esto es una funcion expresada, es decir una funcion que se a asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira...Uncaught ReferenceError: Cannot access 'funcionExpresada' before initialization")
+}
+
+funcionExpresada()
+
+
+
+    </script>
+
+
+</body>
+</html>

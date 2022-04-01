@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Template Strings</h1>
+    <ul>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Primavera</li>
+        <li>Invierno</li>
+    </ul>
+    <script>
+        // CONCATENACION - Unir caracteres  palabras etc..
+
+        let nombre = "Andres"
+        let apellido = "Restrepo"
+        let segundo_apellido = "Salas"
+
+        // Concatenacion
+
+        let saludo = "Hola mi nombre es " + nombre + " " + apellido + " " + segundo_apellido
+        console.log(saludo)//Forma de concatenar clasica
+
+        //Interpolacion de variables, usando TEMPLATE STRINGS ``, la forma mas intuitiva y organizada de concatenar
+        
+        let saludo2 = `Hola mi nombre es ${nombre} ${apellido} ${segundo_apellido} `
+        console.log(saludo2)//Recordar Template Strings (${} y ``)
+
+        
+        let ul = `
+    <ul>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Primavera</li>
+        <li>Invierno</li>
+    </ul>`
+    console.log(ul)//Otro ejemplo de concatenar con Template Strings
+
+
+
+
+
+    </script>
+</body>
+</html>

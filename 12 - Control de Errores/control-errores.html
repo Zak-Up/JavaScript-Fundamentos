@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Control de Errores</h1>
+    <script>
+    // Try Finally
+
+    try {
+        let numero = "y"
+
+        if(isNaN(numero)){
+            throw new Error("El caracter introducido no es un numero");
+        }
+
+        console.log(numero * numero);
+    }catch(error){
+        console.log(`Se produjo el siguiente error: ${error}`);
+    }// De esta manera podemos generar un error nosotros a traves del try - catch para tener un mejor flujo en el desarrollo del codigo
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objeto Console</h1>
+    <script>
+
+        /*                OBJETO CONSOLE
+        El objeto Console provee acceso a la consola de depuración de los navegadores (e.j., la Consola Web en Firefox). Los detalles de como funciona varían de navegador en navegador, pero hay un conjunto de características que de facto son generalmente proporcionadas.
+
+Console puede ser accedido desde cualquier método global, Window en el ámbito de navegación, WorkerGlobalScope (en-US), y sus variantes especificas de worker.
+        */
+
+console.log(console);
+console.error("Esto es un error");
+console.warn("Esto es un aviso");
+console.info("Esto es un mensaje informativo");
+console.log("Un registro de lo que esta pasando en nuestra aplicacion");
+
+let nombre = "Andres",
+  apellido = "Restrepo",
+  edad = 30
+
+console.log(nombre);
+console.log(apellido);
+console.log(edad);
+console.log(nombre,apellido,edad);
+console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`);
+
+console.log(window);
+console.log(document);
+console.dir(window);
+console.dir(document);
+
+console.group("Cursos de @jonmircha en youtube");
+console.log("Curso de JavaScript");
+console.log("Curso de Node js");
+console.log("Curso de PWAs");
+console.log("Curso de Flexbox");
+console.log("Curso de diseño y programacion web");
+
+console.log(console);
+console.table(Object.entries(console));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ciclos</h1>
+
+    <script>
+
+//            While
+
+let contador = 0;
+
+while (contador < 10){
+    console.log(contador);
+    contador++;
+}//Crea un bucle que repite la operacion sumando un valor con el ++ hasta que llega a 10
+
+//             For
+
+for (let i = 0; i < 10, i++;){
+    console.log("for" + i);
+}//Tambien crea un bucle como en el ejemplo anterior y usando el increment ++
+
+
+//Variante de el for con array y contando longitud
+
+let numeros =  [10,20,30,40,50,60,70,80,90];
+
+for(let i = 0; i < numeros.length; i++) {
+    console.log(numeros[i])
+}//Tambien crea un bucle pero suma de 10 en 10 con la propiedad numeros.length e incrementandolos con el increment ++
+
+const jon = {
+    nombre: "Andres",
+    apellido: "Restrepo",
+    edad: 30
+}
+
+//For in
+
+for (const propiedad in jon){
+    console.log(propiedad);
+}//De esta manera podriamos recorrer iterar las propiedades de un arreglo en este caso (jon) y la propiedad es (nombre, apellido, edad)
+
+for (const propiedad in jon){
+    console.log(`key:${propiedad},Value:${jon[propiedad]}`)
+}//De esta manera podemos recorrer iterar las propiedades de este arreglo pero en este caso si especifica los valores dentro la propiedad jon (Andres,Restrepo,30) importante en el value de la propiedad colocar el array[]
+
+//For off
+
+let cadena = "Hola Mundo";
+
+for (const caracter of cadena){
+    console.log(caracter);
+}//Con for off podemos recorrer o iterar los elementos de una propiedad o arreglo en este caso de (cadena) la direncia entre for in y for off es que for in me permite recorrer los elementos primitivos mientras que for off me permite recorrer cualquier elemento iterable.
+
+
+
+    </script>
+</body>
+</html>

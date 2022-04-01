@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Numeros</h1>
+    <script>
+
+        let a = 2
+        let b = new Number(1)
+        let c = 7.19
+        let d = "5.6"
+
+        console.log(a,b)//Asigna los valores agregados
+
+        console.log(c.toFixed(1))//Muestra los numeros decimales en este caso la aproximacion del valor c con solo 1 digito
+
+        console.log(c.toFixed(6))//En este caso hace la aproximacion de c pero con 6 numeros en los digitos
+
+        console.log(parseInt(c))// Convierte en un valor numero entero
+
+        console.log(parseFloat(c))// Convierte en valor decimal y lo redondea
+
+        console.log(typeof c, typeof d)//Nos muestra que tipo de valor es en este caso numero y cadena de texto
+
+        console.log(a+b)//Suma los valores normalmente ya que el valor b tiene el valor numero
+
+        console.log(c+d)//No los suma sino que los concatena porque el valor d esta como un valor de texto y no numerico
+
+        console.log(c+parseInt(d))//En este ejemplo si los suma ya que el parseInt convierte a d en un valor numerico
+
+        console.log(c+parseFloat(d))//En este ejemplo los suma y el parseFloat redondea el numero decimal
+
+    </script>
+</body>
+</html>
