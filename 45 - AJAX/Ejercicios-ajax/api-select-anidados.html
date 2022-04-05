@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Departamentos y Municipios de Colombia</title>
+</head>
+<body>
+    <h1>Departamentos y municipios de Colombia</h1>
+    <h2>Colombia</h2>
+    <label for="select-primary">Departamentos</label>
+    <select name="primary" id="select-primary">
+        <option value="">Elige un Estado</option>
+    </select>
+    <p></p>
+    <label for="select-secondary">Municipios</label>
+    <select name="secondary" id="select-secondary">
+        <option value="">Elige un Municipio</option>
+    </select>
+    <p></p>
+    <script>
+        const d = document,
+        $selectPrimary = d.getElementById("select-primary"),
+        $selectSecondary = d.getElementById("select-secondary");
+
+        function loadStates(){
+            fetch("https://raw.githubusercontent.com/marcovega/colombia-json/master/colombia.min.json")
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(json => {
+                console.log(json);
+                let $options = `<option value="">Elige un Estado</option>`;
+                json.forEach(el => $options += `<option value="${el}">${el}</option>`)
+                $selectPrimary.innerHTML = $options;
+            })
+            .catch(err => {
+                console.log(err);
+                let message = err.statusText || "Ocurrio un error";
+                $selectPrimary.nextElementSibling.innerHTML = `Error ${err.status}: ${message}`;
+            });
+        }
+        
+
+        function loadTowns(state){
+
+        }
+
+        d.addEventListener("DOMContentLoaded", e => loadStates());
+
+        $selectPrimary.addEventListener("change", e => loadTowns(e.target.value));
+    </script>
+</body>
+</html>
