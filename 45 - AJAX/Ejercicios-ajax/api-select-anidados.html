@@ -24,12 +24,12 @@
         $selectSecondary = d.getElementById("select-secondary");
 
         function loadStates(){
-            fetch("https://raw.githubusercontent.com/marcovega/colombia-json/master/colombia.min.json")
+            fetch("https://api.copomex.com/query/get_estados?ceee7b39-adaa-46c6-a9f0-54b81cce577b=pruebas")
             .then(res => res.ok ? res.json() : Promise.reject(res))
             .then(json => {
                 console.log(json);
                 let $options = `<option value="">Elige un Estado</option>`;
-                json.forEach(el => $options += `<option value="${el}">${el}</option>`)
+                json.response.estado.forEach(el => $options += `<option value="${el}">${el}</option>`)
                 $selectPrimary.innerHTML = $options;
             })
             .catch(err => {
