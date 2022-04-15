@@ -3,6 +3,7 @@ import api from '../helpers/wp_api.js'
 import { PostCard } from './PostCard.js';
 import { Post } from './Post.js';
 import { SearchCard } from './SearchCard.js';
+import { ContactForm } from './ContactForm.js';
 
 export async function Router(){
 
@@ -55,7 +56,8 @@ export async function Router(){
             }
         });
     } else if(hash === "#/contacto"){
-        $main.innerHTML = "<h2>Seccion del Contacto</h2>";
+        $main.appendChild(ContactForm());
+        ContactForm;
         
     } else {
         
